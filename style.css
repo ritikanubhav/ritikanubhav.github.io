@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:300,400");
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@font-face {
+    font-family: "BOOterZZ";
+    src: url(fonts/BOOTERZZ.ttf),
+        url(fonts/Raleway-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style:normal;
+}
+*{
+    box-sizing: border-box;
+    font-family:'Raleway-VariableFont_wght',Arial,'Arial Narrow', sans-serif;
+    font-weight: normal;
+}
+  html,body{
+      margin:0;
+      padding:0;
+  }
+  .name{
+    text-align: left;
+    padding-left:0.3em;
+    padding-top: 0.8em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size:7em;
+    font-family:"BOOTERZZ";
+    font-weight:normal;
+    color:white;
+  }
+  .navbar {
+    overflow: hidden;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-color: rgba(0,0,0,0.2);
+    background-blend-mode: multiply;
+    font-family: Raleway;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float:right;
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 1.3em;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(138, 128, 128,0.4);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .container {
+    max-width: 90%;
+    margin:4em auto;
+  }
+
+  .container h1{
+    font-size:2.5em;
+  }
+
+  .skill-main-header{
+    text-align:center;
+  }
+
+  .content{
+    margin-top:0;
+    font-size:2em;
+    padding-bottom: 2.5em;
+  }
+
+  .meimg{
+    float:left;
+    margin:25px;
+    border-radius:50%;
+    box-shadow: 10px 15px 20px rgba(138, 128, 128,0.4);
+    
+  }
+
+  .meimg:hover{
+    opacity:0.9;
+    box-shadow: 10px 15px 20px rgba(27, 197, 240, 0.4)
+  }
+
+  .skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .skill-header{
+    text-align:center;
+    font-size:1.5em;
+  }
+
+  .card{
+    border-radius: 10%;
+    box-shadow: -12px 12px  rgba(138, 128, 128,0.4);
+    padding: 0 .8em;
+    margin-bottom:2.8em;
+  }
+
+  .card:hover{
+    box-shadow: -8px 5px  rgba(138, 128, 128,0.8);
+    background-color:rgba(86,204,242,0.6);
+    color:white;
+  }
+
+  .card img{
+    border-radius: 10%;
+  }
+
+  .card-link{
+    padding-left: 9.5em;
+  }
+
+  .card a{
+    display: inline-block;
+    padding: 0.5em;
+  }
+
+  .card p{
+    text-align:center;
+    font-size:1.3em;
+  }
+
+  .webd-btn{
+    margin-bottom:1em;
+    margin-left:4em;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor:pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color:#56CCF2;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  .webd-btn:hover{
+    background-color:rgba(255,255,255);
+    color: #56CCF2;
+  }
+
+  .webd-btn:active {
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .main-footer{
+    background-color: #56CCF2;
+    color:white;
+    padding:.25em 0;
+  }
+
+  .main-footer-container
+  {
+    display: flex;
+  }
+
+  .main-footer-container ul
+  {
+    flex-grow: 1;
+    text-align:center;  
+  } 
+  
+  .footer-nav li
+  {
+    display: inline;
+    padding:0 .5em;
+  }
+
+  .footer-nav a
+  {
+    display:inline-block;
+    padding: 1.5em;
+    color :white;
+    text-decoration: none;
+  }
+
+  .footer-nav a:hover{
+    background-color:rgba(255,255,255,0.3);
+  }
+
+  .contact-header{
+    margin-left: 1em;
+    margin-bottom:0;
+    font-family:'Metal Mania','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-size:3em;
+    text-align: center;
+  }
