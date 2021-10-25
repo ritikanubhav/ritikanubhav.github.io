@@ -64,7 +64,7 @@
     margin: 0; /* Important for vertical align on mobile phones */
   }
   
-  /* Add a red background color to navbar links on hover */
+  /* Add a background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: rgb(138, 128, 128,0.4);
   }
@@ -89,7 +89,7 @@
     text-align: left;
   }
   
-  /* Add a grey background color to dropdown links on hover */
+  /* Add background color to dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #ddd;
   }
@@ -116,6 +116,7 @@
     margin-top:0;
     font-size:2em;
     padding-bottom: 2.5em;
+    line-height: 1.5em;
   }
 
   .meimg{
@@ -166,6 +167,10 @@
   .card a{
     display: inline-block;
     padding: 0.5em;
+  }
+
+  .card-link a:hover{
+    background-color:rgba(255,255,255,0.3);
   }
 
   .card p{
