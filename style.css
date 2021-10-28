@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:300,400");
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Manrope&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 @font-face {
     font-family: "BOOterZZ";
-    src: url(fonts/BOOTERZZ.ttf),
-        url(fonts/Raleway-VariableFont_wght.ttf);
+    src: url(fonts/BOOTERZZ.ttf);
     font-weight: normal;
     font-style:normal;
 }
 *{
     box-sizing: border-box;
-    font-family:'Raleway-VariableFont_wght',Arial,'Arial Narrow', sans-serif;
+    font-family:"Roboto","Lora","Manrope";
     font-weight: normal;
 }
   html,body{
@@ -18,11 +17,9 @@
   }
   .name{
     text-align: left;
-    padding-left:0.3em;
-    padding-top: 0.8em;
-    padding-bottom: 0.2em;
+    padding:0.3em 0.5em;
     margin: 0;
-    font-size:7em;
+    font-size:6em;
     font-family:"BOOTERZZ";
     font-weight:normal;
     color:white;
@@ -33,13 +30,13 @@
     background-size: cover;
     background-color: rgba(0,0,0,0.2);
     background-blend-mode: multiply;
-    font-family: Raleway;
+    font-family: Roboto;
   }
   
   /* Links inside the navbar */
   .navbar a {
     float:right;
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -54,7 +51,7 @@
   
   /* Dropdown button */
   .dropdown .dropbtn {
-    font-size: 1.3em;
+    font-size: 1.1em;
     border: none;
     outline: none;
     color: white;
@@ -74,7 +71,7 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -101,11 +98,11 @@
 
   .container {
     max-width: 90%;
-    margin:4em auto;
+    margin:3em auto;
   }
 
   .container h1{
-    font-size:2.5em;
+    font-size:2em;
   }
 
   .skill-main-header{
@@ -114,14 +111,15 @@
 
   .content{
     margin-top:0;
-    font-size:2em;
-    padding-bottom: 2.5em;
-    line-height: 1.5em;
+    font-size:1.5em;
+    padding-bottom: 2em;
+    line-height: 1.6em;
+    letter-spacing: 1.2px;
   }
 
   .meimg{
     float:left;
-    margin:25px;
+    margin:20px;
     border-radius:50%;
     box-shadow: 10px 15px 20px rgba(138, 128, 128,0.4);
     
@@ -134,20 +132,21 @@
 
   .skills-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-content: space-around; 
   }
 
   .skill-header{
     text-align:center;
-    font-size:1.5em;
+    font-size:1.2em;
   }
 
   .card{
     border-radius: 10%;
     box-shadow: -12px 12px  rgba(138, 128, 128,0.4);
-    padding: 0 .8em;
-    margin-bottom:2.8em;
+    padding: 0.2em .8em;
+    margin-bottom:2em;
   }
 
   .card:hover{
@@ -156,12 +155,15 @@
     color:white;
   }
 
-  .card img{
+  .poster{
+    width:300px;
+    height:200px;
     border-radius: 10%;
   }
 
   .card-link{
-    padding-left: 9.5em;
+    display:flex;
+    justify-content:center;
   }
 
   .card a{
@@ -169,21 +171,20 @@
     padding: 0.5em;
   }
 
-  .card-link a:hover{
+  .cp-links a:hover{
     background-color:rgba(255,255,255,0.3);
   }
 
   .card p{
     text-align:center;
-    font-size:1.3em;
+    font-size:1.1em;
   }
 
   .webd-btn{
-    margin-bottom:1em;
-    margin-left:4em;
+    margin-bottom: 1.1em;
     display: inline-block;
     padding: 15px 25px;
-    font-size: 24px;
+    font-size: 20px;
     cursor:pointer;
     text-align: center;
     text-decoration: none;
@@ -244,8 +245,8 @@
   .contact-header{
     margin-left: 1em;
     margin-bottom:0;
-    font-family:'Metal Mania','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Metal Mania','Franklin Gothic Medium','Arial Narrow';
     font-weight: normal;
-    font-size:3em;
+    font-size:2.5em;
     text-align: center;
   }
