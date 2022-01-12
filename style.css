@@ -6,15 +6,21 @@
     font-weight: normal;
     font-style:normal;
 }
+
 *{
     box-sizing: border-box;
     font-family:"Roboto","Lora","Manrope";
     font-weight: normal;
 }
+
   html,body{
       margin:0;
       padding:0;
   }
+  .main-header { 
+    font-family: Roboto;
+  }
+
   .name{
     text-align: left;
     padding:0.5em;
@@ -22,15 +28,23 @@
     font-size:6em;
     font-family:"BOOTERZZ";
     font-weight:normal;
-    color:white;
-  }
-  .navbar {
-    overflow: hidden;
     background-image: url(images/background.jpg);
     background-size: cover;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: multiply;
-    font-family: Roboto;
+    color:white;
+  }
+
+  .navbar{
+    margin:0;
+    padding:0;
+    height: 50px;
+    background-image: linear-gradient(to right ,rgb(21, 21, 48), rgb(26, 26, 114),rgb(21, 21, 48));
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index:1; 
+    
   }
   
   /* Links inside the navbar */
@@ -41,12 +55,13 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition:transform 0.6s;
   }
   
   /* The dropdown container */
   .dropdown {
     float: right;
-    overflow: hidden;
+    overflow: hidden; 
   }
   
   /* Dropdown button */
@@ -59,11 +74,12 @@
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
+    transition:transform 0.6s;
   }
   
   /* Add a background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(138, 128, 128,0.4);
+    transform:translateY(8px);
   }
   
   /* Dropdown content (hidden by default) */
@@ -88,7 +104,7 @@
   
   /* Add background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: rgb(252, 246, 246);
   }
   
   /* Show the dropdown menu on hover */
@@ -96,14 +112,21 @@
     display: block;
   }
 
-  .container {
+  .super-container{
     max-width: 90%;
-    margin:3em auto;
+    margin:1rem auto;
+    display:flex;
+    flex-direction:column;
   }
 
   .container h1{
     text-align:center;
     font-size:2em;
+    transition: transform 1s;
+  }
+
+  .container h1:hover{
+    transform:scale(1.3);
   }
 
   .skill-main-header{
@@ -121,14 +144,16 @@
     width: 200px;
     float:left;
     margin:0px 25px;
-    border-radius:50%;
+    border-radius:80%;
     box-shadow: 10px 10px 10px rgba(138, 128, 128,0.4);
+    transition: all 0.6s ease-in-out;
   }
   
   .meimg:hover{
-    opacity:0.9;
     padding:5px;
-    box-shadow: 10px 15px 20px rgba(27, 197, 240, 0.4)
+    border-radius:50%;
+    box-shadow: 10px 15px 20px rgba(27, 197, 240, 0.4);
+    transform:scale(1.15,1.15);
   }
 
   .skills-container{
@@ -144,16 +169,46 @@
   }
 
   .card{
-    border-radius: 10%;
-    box-shadow: -12px 12px  rgba(138, 128, 128,0.4);
-    padding: 0.2em .8em;
-    margin-bottom:2em;
+    width:340px;
+    height:440px;
+    margin-bottom:3.1rem;
+    perspective:800px; 
   }
 
-  .card:hover{
-    box-shadow: -8px 5px  rgba(138, 128, 128,0.8);
-    background-color:rgba(86,204,242,0.6);
-    color:white;
+  .card-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: -12px 12px rgb(138 128 128 / 40%);
+    border-radius: 10%;
+    padding: 1em;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+
+  }
+  .card:hover .card-content{
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back 
+  {
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .front{
+    transform: translateZ(30px);
+  }
+
+  .back{
+    transform: translateZ(-40px) rotateY(180deg);
+  }
+
+  .card p{
+    line-height:1.5em;
   }
 
   .poster{
@@ -191,15 +246,10 @@
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color:#56CCF2;
+    background-image: linear-gradient(to bottom right,rgb(174,153, 237), rgb(207, 79, 232));
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-  }
-
-  .webd-btn:hover{
-    background-color:rgba(255,255,255);
-    color: #56CCF2;
   }
 
   .webd-btn:active {
@@ -209,7 +259,7 @@
   }
 
   .main-footer{
-    background-color: #56CCF2;
+    background-image: linear-gradient(to bottom right,rgb(21, 21, 48), rgb(42, 42, 138));
     color:white;
     padding:.25em 0;
   }
@@ -239,10 +289,11 @@
     padding: 1.1em;
     color :white;
     text-decoration: none;
+    transition: transform 0.5s;
   }
 
   .footer-nav a:hover{
-    background-color:rgba(255,255,255,0.3);
+    transform:scale(1.3);
   }
 
   .contact-header{
@@ -258,11 +309,32 @@
     .name{
       text-align: center;
       padding:0.5em 0.5em;
-      font-size:5em;
+      font-size:4.5rem;
     }
 
-    .container h1{
-      text-align:center;
+    .navbar a {
+      font-size: 0.95rem;
+      padding: 15px 9px;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 0.95rem;
+      padding: 15px 9px;
+    }
+
+    .webd-btn{
+      font-size: 1.1rem;
+    }
+
+    .container h1:hover{
+      transform:scale(1.1);
+    }
+    
+    .card{
+      width:300px;
+      height:400px;
+      margin-bottom:3.1rem;
+      perspective:800px; 
     }
 
     .poster{
@@ -270,6 +342,7 @@
       height:170px;
       border-radius: 10%;
     }
+
     .meimg{
       float:none;
       display:block;
