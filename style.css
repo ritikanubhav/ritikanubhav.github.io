@@ -39,7 +39,7 @@
   .navbar{
     margin:0;
     padding:0;
-    height: 50px;
+    height: 52px;
     background-color:#0E1126;
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -81,7 +81,7 @@
   }
   /* Add a background color to navbar links on hover */
   .nav-option a:hover{
-    border:solid 1px rgb(15, 116, 199);
+    border:solid 1px rgb(11, 134, 235);
   }
   
   /* Dropdown content (hidden by default) */
@@ -128,7 +128,7 @@
   }
 
   .container h1{
-    color:#311842;
+    color:#0E1126;
     text-align:center;
     font-weight:600;
     font-size:2em;
@@ -324,6 +324,7 @@
       text-align: center;
       padding:0.5em 0.5em;
       font-size:4rem;
+      font-weight:500;
     }
 
     .navbar a {
@@ -344,7 +345,8 @@
     }
 
     .content{
-      font-size:1.22em; 
+      text-align:center;
+      font-size:1.2em; 
     }
 
     .container h1{
@@ -354,7 +356,6 @@
   
     .container h1:hover {
       font-size:2rem;
-      opacity:0.6;
     }
     .webd-btn{
       font-size: 1.1rem;
