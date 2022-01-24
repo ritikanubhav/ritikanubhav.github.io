@@ -39,7 +39,7 @@
   .navbar{
     margin:0;
     padding:0;
-    height: 52px;
+    height: 51px;
     background-color:#0E1126;
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -76,19 +76,18 @@
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
   }
-  .nav-option a{
-    transition:all 0.6s;
-  }
+  
   /* Add a background color to navbar links on hover */
   .nav-option a:hover{
-    border:solid 1px rgb(11, 134, 235);
+    border-left:solid 1px rgb(11, 134, 235);
+    border-top:solid 1px rgb(11, 134, 235);
   }
   
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    color:rgb(60, 14, 121);
+    color:#0E1126;
     background-color:#f3eefc ;
     min-width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -98,21 +97,22 @@
   /* Links inside the dropdown */
   .dropdown-content a {
     float: none;
-    color:rgb(60, 14, 121);
+    color:#0E1126;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    border:solid 4px #d9c9f5;
     text-align: left;
   }
   
   /* Add background color to dropdown links on hover */
   .dropdown-content a:hover {
-    font-weight: bold;
+    border:solid 1px #0E1126;
+   
   }
   .dropdown:hover
   {
-    border:solid 1px rgb(15, 116, 199);
+    border-left:solid 1px rgb(11, 134, 235);
+    border-top:solid 1px rgb(11, 134, 235);
   }
   
   /* Show the dropdown menu on hover */
@@ -133,13 +133,12 @@
     font-weight:600;
     font-size:2em;
     transition: all 0.6s;
-    opacity:0.75;
   }
 
   .container h1:hover {
     font-weight:800;
     font-size:2.4rem;
-    opacity:0.9;
+    opacity:0.8;
   }
 
   .skill-main-header{
@@ -147,7 +146,7 @@
   }
 
   .content{
-    color:rgb(21, 9, 75);
+    color:#0E1126;
     font-size:1.4em;
     padding-bottom: 1.5em;
     line-height: 1.6em;
