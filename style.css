@@ -34,6 +34,15 @@
     background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: multiply;
     color:white;
+    animation: 2s ease-in-out alternate popup;
+  }
+  @keyframes popup{
+    0%{
+      transform:translateY(-100%);
+    }
+    100%{
+      transform:translateY(0%);
+    }
   }
 
   .navbar{
@@ -79,8 +88,8 @@
   
   /* Add a background color to navbar links on hover */
   .nav-option a:hover{
-    border-left:solid 1px rgb(11, 134, 235);
-    border-top:solid 1px rgb(11, 134, 235);
+    border-left:solid 1px rgb(225, 230, 235);
+    border-top:solid 1px rgb(255, 255, 255);
   }
   
   /* Dropdown content (hidden by default) */
@@ -106,13 +115,13 @@
   
   /* Add background color to dropdown links on hover */
   .dropdown-content a:hover {
-    border:solid 1px #0E1126;
-   
+    font-weight:bolder;
   }
+  
   .dropdown:hover
   {
-    border-left:solid 1px rgb(11, 134, 235);
-    border-top:solid 1px rgb(11, 134, 235);
+    border-left:solid 1px rgb(248, 248, 248);
+    border-top:solid 1px rgb(250, 253, 255);
   }
   
   /* Show the dropdown menu on hover */
@@ -128,7 +137,10 @@
   }
 
   .container h1{
-    color:#0E1126;
+    background: -webkit-linear-gradient(#0E1126,#72335f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align:center;
     font-weight:600;
     font-size:2em;
@@ -138,7 +150,6 @@
   .container h1:hover {
     font-weight:800;
     font-size:2.4rem;
-    opacity:0.8;
   }
 
   .skill-main-header{
@@ -151,6 +162,17 @@
     padding-bottom: 1.5em;
     line-height: 1.6em;
     letter-spacing: 1.2px;
+    animation:2s ease-in-out slidein;  
+
+  }
+
+  @keyframes slidein {
+    from {
+        transform:translateX(100%);
+    }
+    to {
+      transform:translateX(0);
+    }
   }
 
   .meimg{
@@ -158,15 +180,16 @@
     float:left;
     margin:0px 25px;
     border-radius:50%;
-    box-shadow: 10px 10px 10px rgba(182, 167, 184, 0.4);
-    transition: all 0.6s ease-in-out;
-  }
+    }
   
   .meimg:hover{
-    padding:5px;
-    border-radius:50%;
-    box-shadow: 10px 15px 20px rgba(103, 68, 185, 0.4);
-    transform:scale(1.15,1.15);
+    animation: 2s ease-in-out 1  revolve;
+  }
+
+  @keyframes revolve{
+    100%{
+      transform:rotateY(360deg);
+    }
   }
 
   .skills-container{
