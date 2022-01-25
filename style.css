@@ -40,7 +40,7 @@
     margin:0;
     padding:0;
     height: 51px;
-    background-color:#0E1126;
+    background-color:#1C252C;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -302,11 +302,14 @@
     padding: 1.1em;
     color :white;
     text-decoration: none;
-    transition: transform 0.5s;
+    border-radius:50%;
+    transition: all 0.5s;
   }
 
   .footer-nav a:hover{
-    transform:scale(1.3);
+    transform:scale(1.25);
+    border-left:1px solid white;
+    border-top:1px solid white;
   }
 
   .contact-header{
