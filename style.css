@@ -35,14 +35,14 @@
     background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: multiply;
     color:white;
-    animation: 2s ease-in-out alternate popup;
+    animation: 1.6s ease-in-out alternate popup;
   }
   @keyframes popup{
     0%{
-      transform:translateY(-100%);
+      transform:translateX(-100%) ;
     }
     100%{
-      transform:translateY(0%);
+      transform:translateY(0%) ;
     }
   }
 
@@ -56,7 +56,7 @@
     position: sticky;
     top: 0;
     z-index:1; 
-    
+    animation: 1.6s ease-in-out alternate popup;
   }
   
   /* Links inside the navbar */
@@ -108,8 +108,9 @@
   /* Links inside the dropdown */
   .dropdown-content a {
     float: none;
-    color:#0E1126;
+    color:#1C252C;;
     padding: 12px 16px;
+    font-weight: 550;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -117,7 +118,7 @@
   
   /* Add background color to dropdown links on hover */
   .dropdown-content a:hover {
-    font-weight:bolder;
+    border-left: 5px solid #1C252C;
   }
   
   .dropdown:hover
@@ -146,7 +147,16 @@
     text-align:center;
     font-weight:600;
     font-size:2em;
+    animation:1.6s ease-in-out comein;
     transition: all 0.6s;
+  }
+  @keyframes comein {
+    from {
+        transform:translateY(-200%);
+    }
+    to {
+      transform:translateY(0) rotateX(2turn);
+    }
   }
 
   .container h1:hover {
@@ -161,13 +171,14 @@
   .about-container{
     overflow:hidden;
   }
+
   .content{
     color:#0E1126;
     font-size:1.4em;
     padding-bottom: 1.5em;
     line-height: 1.6em;
     letter-spacing: 1.2px;
-    animation:2s ease-in-out slidein;  
+    animation:1.6s ease-in-out slidein;
 
   }
 
@@ -176,8 +187,11 @@
         transform:translateX(100%);
     }
     to {
-      transform:translateX(0);
+      transform:translateX(0) rotateY(1turn);
     }
+  }
+  .content::first-letter{
+    font-size:1.5em;
   }
 
   .meimg{
@@ -193,7 +207,7 @@
 
   @keyframes revolve{
     100%{
-      transform:rotateY(360deg);
+      transform:rotateZ(1turn) rotateX(1turn);
     }
   }
 
