@@ -20,6 +20,7 @@
   }
   .main-header { 
     font-family: Roboto;
+    overflow: hidden;
   }
 
   .name{
@@ -46,6 +47,7 @@
   }
 
   .navbar{
+    font-family: Roboto;
     margin:0;
     padding:0;
     height: 51px;
@@ -156,6 +158,9 @@
     text-align:center;
   }
 
+  .about-container{
+    overflow:hidden;
+  }
   .content{
     color:#0E1126;
     font-size:1.4em;
