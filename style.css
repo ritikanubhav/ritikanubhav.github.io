@@ -36,6 +36,10 @@
     background-blend-mode: multiply;
     color:white;
     animation: 1.6s ease-in-out alternate popup;
+    cursor: pointer;
+  }
+  .name:hover{
+    text-shadow: 0 0 10px #fff, 0 0 20px #4b7ce4, 0 0 40px #2967ee, 0 0 50px #5981f1, 0 0 60px #4e94f0, 0 0 70px #72335f;
   }
   @keyframes popup{
     0%{
@@ -57,6 +61,7 @@
     top: 0;
     z-index:1; 
     animation: 1.6s ease-in-out alternate popup;
+     box-shadow: rgba(114, 124, 133, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;;
   }
   
   /* Links inside the navbar */
@@ -118,7 +123,7 @@
   
   /* Add background color to dropdown links on hover */
   .dropdown-content a:hover {
-    border-left: 5px solid #1C252C;
+    font-weight: bold;
   }
   
   .dropdown:hover
@@ -141,8 +146,8 @@
 
   .container h1{
     background: -webkit-linear-gradient(#0E1126,#72335f);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align:center;
     font-weight:600;
@@ -164,10 +169,6 @@
     font-size:2.4rem;
   }
 
-  .skill-main-header{
-    text-align:center;
-  }
-
   .about-container{
     overflow:hidden;
   }
@@ -176,6 +177,7 @@
     color:#0E1126;
     font-size:1.4em;
     padding-bottom: 1.5em;
+    text-align: justify;
     line-height: 1.6em;
     letter-spacing: 1.2px;
     animation:1.6s ease-in-out slidein;
@@ -200,38 +202,37 @@
     margin:0px 25px;
     border-radius:50%;
     }
-  
-  .meimg:hover{
-    animation: 2s ease-in-out 1  revolve;
+
+  .container-main-header{
+    text-align:center;
   }
 
-  @keyframes revolve{
-    100%{
-      transform:rotateZ(1turn) rotateX(1turn);
-    }
-  }
-
-  .skills-container{
+  .inner-container{
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around; 
     align-content: space-around; 
   }
 
-  .skill-header{
+  .card-header{
     text-align:center;
     font-size:1.2em;
   }
 
   .card{
-    width:21.25em;
-    height:27.5em;
+    width:18em;
+    height:24em;
     margin-bottom:3.1rem;
     perspective:800px; 
   }
 
   .card-content{
     position: relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
     width: 100%;
     height: 100%;
     background-color:rgb(218, 207, 245);
@@ -243,7 +244,7 @@
     transform-style: preserve-3d;
 
   }
-  .card:hover .card-content{
+  .card:hover .skill-card-content{
     transform: rotateY(180deg);
   }
 
@@ -268,9 +269,15 @@
   }
 
   .poster{
-    width:300px;
-    height:200px;
-    border-radius: 5%;
+    width:16em;
+    height:10em;
+    border-radius: 25px;
+    transform:rotate(-8deg) ;
+    transition:transform 500ms;
+  }
+
+  .card:hover .poster{
+    transform:rotate(0deg);
   }
 
   .card-link{
@@ -289,7 +296,7 @@
 
   .card p{
     text-align:center;
-    font-size:1.1em;
+    font-size:1.05em;
   }
 
   .webd-btn{
@@ -303,13 +310,17 @@
     outline: none;
     color: #fff;
     background-image: linear-gradient(to bottom right,rgb(174,153, 237), rgb(207, 79, 232));
-    border: 4px solid white;
+    border: 0px solid white;
+    box-shadow:
+    inset -3px -3px 7px  rgba(0, 0, 0, 0.25),
+    inset 3px 2px 7px  rgba(255, 255, 255, 0.3);
     border-radius: 15px;
   }
 
   .webd-btn:active {
-    background-color: rgba(255,255,255,0.7);
-    box-shadow: 0 5px #666;
+    box-shadow:
+    -3px -3px 7px  rgba(0, 0, 0, 0.25),
+    3px 2px 7px  rgba(255, 255, 255, 0.3);
     transform: translateY(4px);
   }
 
@@ -331,6 +342,14 @@
     text-align:center;
     padding:0;
   } 
+
+  .contact-header{
+    margin-bottom:0;
+    font-family:'Metal Mania','Franklin Gothic Medium','Arial Narrow';
+    font-weight: normal;
+    font-size:2.5rem;
+    text-align: center;
+  }
   
   .footer-nav li
   {
@@ -346,20 +365,13 @@
     text-decoration: none;
     border-radius:50%;
     transition: all 0.5s;
+    box-shadow:
+    inset -3px -3px 7px  rgba(0, 0, 0, 0.25),
+    inset 3px 2px 7px  rgba(255, 255, 255, 0.3);
   }
 
   .footer-nav a:hover{
-    transform:scale(1.25);
-    border-left:1px solid white;
-    border-top:1px solid white;
-  }
-
-  .contact-header{
-    margin-bottom:0;
-    font-family:'Metal Mania','Franklin Gothic Medium','Arial Narrow';
-    font-weight: normal;
-    font-size:2.5rem;
-    text-align: center;
+    transform:scale(1.2);
   }
 
   @media only screen and (max-width:550px)
@@ -389,7 +401,6 @@
     }
 
     .content{
-      text-align:center;
       font-size:1.2em; 
     }
 
@@ -401,23 +412,5 @@
     .container h1:hover {
       font-size:2rem;
     }
-    .webd-btn{
-      font-size: 1.1rem;
-      padding: 12px 20px;
-    }
     
-    .card{
-      width:275px;
-      height:370px;
-    }
-
-    .card-content{
-      font-size: 0.9rem;
-    }
-
-    .poster{
-      width:242px;
-      height:160px;
-    }
-
   }
