@@ -14,6 +14,7 @@
 }
 
   html,body{
+      scroll-behavior: smooth;
       margin:0;
       padding:0;
       background-color:#f3eefc;
@@ -141,9 +142,13 @@
     max-width: 90%;
     margin:1rem auto;
     display:flex;
+    margin-top:0;
     flex-direction:column;
   }
-
+  .container{
+    padding-top:50px;
+    margin-bottom: 0;
+  }
   .container h1{
     background: -webkit-linear-gradient(#0E1126,#72335f);
     -webkit-background-clip: text;
@@ -151,6 +156,7 @@
     -webkit-text-fill-color: transparent;
     text-align:center;
     font-weight:600;
+    margin-top:0;
     font-size:2em;
     animation:1.6s ease-in-out comein;
     transition: all 0.6s;
@@ -171,13 +177,14 @@
 
   .about-container{
     overflow:hidden;
+    margin-bottom: 0;
   }
 
   .content{
     color:#0E1126;
     font-size:1.4em;
-    padding-bottom: 1.5em;
     text-align: justify;
+    margin-bottom:0;
     line-height: 1.6em;
     letter-spacing: 1.2px;
     animation:1.6s ease-in-out slidein;
