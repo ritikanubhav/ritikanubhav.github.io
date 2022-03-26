@@ -37,11 +37,10 @@
     background-blend-mode: multiply;
     color:white;
     animation: 1.6s ease-in-out alternate popup;
+    text-shadow: 0 0 10px #fff, 0 0 20px #4b7ce4, 0 0 40px #2967ee, 0 0 50px #5981f1, 0 0 60px #4e94f0, 0 0 70px #72335f;
     cursor: pointer;
   }
-  .name:hover{
-    text-shadow: 0 0 10px #fff, 0 0 20px #4b7ce4, 0 0 40px #2967ee, 0 0 50px #5981f1, 0 0 60px #4e94f0, 0 0 70px #72335f;
-  }
+
   @keyframes popup{
     0%{
       transform:translateX(-100%) ;
@@ -59,7 +58,7 @@
     background-color:#1C252C;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 0;
+    top:-5px;
     z-index:1; 
     animation: 1.6s ease-in-out alternate popup;
      box-shadow: rgba(114, 124, 133, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;;
@@ -96,8 +95,9 @@
   
   /* Add a background color to navbar links on hover */
   .nav-option a:hover{
-    border-left:solid 1px rgb(225, 230, 235);
-    border-top:solid 1px rgb(255, 255, 255);
+    background-color:black;
+    border:solid 1px rgb(255, 255, 255);
+    border-bottom:0;
   }
   
   /* Dropdown content (hidden by default) */
@@ -129,8 +129,9 @@
   
   .dropdown:hover
   {
-    border-left:solid 1px rgb(248, 248, 248);
-    border-top:solid 1px rgb(250, 253, 255);
+    background-color: #0E1126;
+    border:solid 1px rgb(255, 255, 255);
+    border-bottom:0;
   }
   
   /* Show the dropdown menu on hover */
@@ -146,7 +147,7 @@
     flex-direction:column;
   }
   .container{
-    padding-top:50px;
+    padding-top:46px;
     margin-bottom: 0;
   }
   .container h1{
@@ -385,8 +386,8 @@
   {
     .name{
       text-align: center;
-      padding:0.5em 0.5em;
-      font-size:4rem;
+      padding:0.7em 0.5em;
+      font-size:4.2rem;
       font-weight:500;
     }
 
